@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Popup</title>
+</head>
+<body>
+    
+
+
+<h2>Popup Heading Text</h2>
+<p><button id="clickBtn">Click to Open Popup</button></p>
+<div id="myPopup" class="modal">
+    <!-- Popup Inside -->
+    <div class="modal-content">
+        <div class="close">&times;</div>
+        
+        <!-- If you want to display videolink then apply this block -->
+        
+        <video width="100%" height="auto" controls id="test">
+        <source src="https://finishingx.de/asset-v1:Safety+S053+open+type@asset+block@S053-1v8_1.webm" type="video/webm">
+        </video>       
+
+
+        
+    </div>
+</div>
+<p>
+    <script>
+
+        var video = document.getElementById("test");
+            function stopVideo() {
+                video.pause();
+                video.currentTime = 0;
+            }
+       
+        var modal = document.getElementById("myPopup");
+       
+        var btn = document.getElementById("clickBtn");
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        
+        span.onclick = function () {
+            modal.style.display = "none";
+             stopVideo();
+        }
+
+        
+             
+        
+</script>
+</body>
+
+</html>
